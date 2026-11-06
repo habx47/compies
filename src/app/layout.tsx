@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import StyledComponentsRegistry from "../../lib/registry";
 import { createGlobalStyle } from "styled-components";
-import { Button, ButtonWrapper, Wrapper } from "./_components/root_layout";
+import { StyledLink, LinkWrapper, Wrapper } from "./_components/root_layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,10 +27,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <GlobalStyles />
           <Wrapper>
             {children}
-            <ButtonWrapper>
-              <Button>Previous</Button>
-              <Button>Next</Button>
-            </ButtonWrapper>
+            <LinkWrapper>
+              <StyledLink href={"/"}>Previous</StyledLink>
+              <StyledLink href={"/"}>Next</StyledLink>
+            </LinkWrapper>
           </Wrapper>
         </StyledComponentsRegistry>
       </body>

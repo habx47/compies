@@ -1,14 +1,15 @@
 "use client";
 
 import styled from "styled-components";
+import Link from "next/link";
 
 export const Wrapper = styled.div`
 `;
 
-export const ButtonWrapper = styled.div`
+export const LinkWrapper = styled.div`
 display: flex;
 justify-content: space-between;
-margin-top: 42px;
+padding-top: 42px;
 `;
 
-export const Button = styled.button``;
+export const StyledLink = styled(Link)``;
