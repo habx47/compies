@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import StyledComponentsRegistry from "../../lib/registry";
+import { createGlobalStyle } from "styled-components";
+import { Button, ButtonWrapper, Wrapper } from "./_components/root_layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,9 +22,36 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <StyledComponentsRegistry>
-        <body>{children}</body>
-      </StyledComponentsRegistry>
+      <body>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          <Wrapper>
+            {children}
+            <ButtonWrapper>
+              <Button>Previous</Button>
+              <Button>Next</Button>
+            </ButtonWrapper>
+          </Wrapper>
+        </StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
+
+const GlobalStyles = createGlobalStyle`
+*,
+*::before,
+*::after, {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-content: center;
+}
+`;
