@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export const Wrapper = styled.div`
+display: flex;
+flex-direction: column;
 `;
 
 export const LinkWrapper = styled.div`

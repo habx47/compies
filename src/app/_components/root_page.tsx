@@ -1,11 +1,15 @@
 "use client";
 
 import styled from "styled-components";
+import { Wrapper } from "./root_layout";
 
 export const Heading = styled.h1`
 margin-top: 0px;
 margin-bottom: 4px;
-text-align: center;
+
+${Wrapper} & {
+  align-self: center;
+}
 `;
 
 export const Sub_Heading = styled.p`
