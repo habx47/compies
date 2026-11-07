@@ -7,7 +7,6 @@ import Tabs from "../_components/tabs";
 export default function Page(): ReactNode {
   return (
     <Wrapper>
-      <Header>Tabs</Header>
       <Tabs>
         <Tabs.List>
           <Tabs.Trigger value="tab1">Account</Tabs.Trigger>
@@ -32,8 +31,4 @@ const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-`;
-
-const Header = styled.h1`
-font-size: 1.3rem;
 `;

@@ -5,7 +5,6 @@ import { styled } from "styled-components";
 export default function Page(): ReactNode {
   return (
     <Wrapper>
-      <Header>Breadcrumbs</Header>
       <BreadCrumbs>
         <Crumbs href="/" isCurrentPage={true}>
           Home
@@ -21,8 +20,4 @@ const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-`;
-
-const Header = styled.h1`
-font-size: 1.3rem;
 `;

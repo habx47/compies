@@ -5,3 +5,10 @@ export const COLORS = {
   transparentGray15: "hsl(0deg 0% 50% / 0.15)",
   transparentGray35: "hsl(0deg 0% 50% / 0.35)",
 };
+
+export const components = [
+  { name: "breadcrumbs", path: "/breadcrumbs" },
+  { name: "radio group", path: "/radiogroup" },
+  { name: "tabs", path: "/tabs" },
+  { name: "progress bar", path: "/progressbar" },
+];

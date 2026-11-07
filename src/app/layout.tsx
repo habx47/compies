@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import StyledComponentsRegistry from "../../lib/registry";
 import { createGlobalStyle } from "styled-components";
-import { StyledLink, LinkWrapper, Wrapper } from "./_components/root_layout";
+import { Wrapper, Links, ContentWrapper } from "./_components/root_layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +26,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <StyledComponentsRegistry>
           <GlobalStyles />
           <Wrapper>
-            {children}
-            <LinkWrapper>
-              <StyledLink href={"/"}>Previous</StyledLink>
-              <StyledLink href={"/"}>Next</StyledLink>
-            </LinkWrapper>
+            <Links />
+            <ContentWrapper>{children}</ContentWrapper>
           </Wrapper>
         </StyledComponentsRegistry>
       </body>
@@ -47,11 +44,6 @@ const GlobalStyles = createGlobalStyle`
 
 html, body {
   height: 100%;
-}
-
-body {
   margin: 0;
-  display: grid;
-  place-content: center;
 }
 `;
