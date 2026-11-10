@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-type ItemValue = `item-${number}`;
+export type ItemValue = `item-${number}`;
 
 type Content = {
   itemValue: ItemValue;
